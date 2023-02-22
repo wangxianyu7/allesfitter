@@ -38,8 +38,8 @@ import warnings
 #::: fct to check if the right signal was found
 ###############################################################################
 def is_multiple_of(a, b, tolerance=0.05):
-    a = np.float(a)
-    b = np.float(b) 
+    a = np.float64(a)
+    b = np.float64(b) 
     result = a % b
     return (abs(result/b) <= tolerance) or (abs((b-result)/b) <= tolerance)
 
