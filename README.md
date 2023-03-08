@@ -80,4 +80,4 @@ The software is freely available at https://github.com/MNGuenther/allesfitter un
  - add ptemcee
  - rotational GP regression kernel as formulated by Foreman-Mackey et al. (2017b)
  - remove special characters from the name of logfile
-
+ - bin function for long-cadence light curves 
