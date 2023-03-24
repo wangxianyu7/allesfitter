@@ -82,3 +82,4 @@ The software is freely available at https://github.com/MNGuenther/allesfitter un
  - remove special characters from the name of logfile
  - bin function for long-cadence light curves 
  - quickstart()
+ - photoeccentric effect
