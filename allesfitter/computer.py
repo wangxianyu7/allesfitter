@@ -1849,16 +1849,18 @@ baseline_switch = \
     'hybrid_poly_5' : baseline_hybrid_poly,
     'hybrid_poly_6' : baseline_hybrid_poly,
     'hybrid_spline' : baseline_hybrid_spline,
-    'hybrid_spline_s' : baseline_hybrid_spline_s, #hybrid spline but with a manually given s-value (to avoid any slow if/else in the function)
     'hybrid_GP'     : baseline_hybrid_GP,
     'sample_offset' : baseline_sample_offset,
     'sample_linear' : baseline_sample_linear,
+    'sample_quadratic' : baseline_sample_quadratic,
+    'sample_cubic' : baseline_sample_cubic,
     'sample_GP_real'         : baseline_sample_GP, #only for plotting
     'sample_GP_complex'      : baseline_sample_GP, #only for plotting   
     'sample_GP_Matern32'     : baseline_sample_GP, #only for plotting
     'sample_GP_SHO'          : baseline_sample_GP, #only for plotting         
     'none'          : baseline_none #only for plotting    
     }
+    
     
 
     
