@@ -1727,8 +1727,33 @@ def baseline_sample_linear(*args):
     x, y, yerr_w, xx, params, inst, key = args
     xx_norm = (xx-x[0]) / (x[-1]-x[0])
     return params['baseline_slope_'+key+'_'+inst] * xx_norm + params['baseline_offset_'+key+'_'+inst]
-        
-    
+
+
+
+#==============================================================================
+#::: calculate baseline: sample_quadratic
+#==============================================================================
+def baseline_sample_quadratic(*args):
+    x, y, yerr_w, xx, params, inst, key = args
+    xx_norm = (xx-x[0]) / (x[-1]-x[0])
+    a = params['baseline_quadratic_'+key+'_'+inst]
+    b = params['baseline_slope_'+key+'_'+inst]
+    c = params['baseline_offset_'+key+'_'+inst]
+    return a * xx_norm**2 + b * xx_norm + c
+
+
+#==============================================================================
+#::: calculate baseline: sample_cubic
+#==============================================================================
+def baseline_sample_cubic(*args):
+    x, y, yerr_w, xx, params, inst, key = args
+    xx_norm = (xx-x[0]) / (x[-1]-x[0])
+    a = params['baseline_cubic_'+key+'_'+inst]
+    b = params['baseline_quadratic_'+key+'_'+inst]
+    c = params['baseline_slope_'+key+'_'+inst]
+    d = params['baseline_offset_'+key+'_'+inst]
+    return a * xx_norm**3 + b * xx_norm**2 + c * xx_norm + d
+
     
 #==============================================================================
 #::: calculate baseline: sample_GP
