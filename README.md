@@ -76,6 +76,7 @@ The software is freely available at https://github.com/MNGuenther/allesfitter un
  - How to install on (M1/2, intel) Mac, Linux and Windows
  - add a option to mcmc_fit and ns_fit to skip continue_old_run prompt
  - np.float to np.float64 :white_check_mark:
+ - tick.label to tick.label1 :white_check_mark:
  - add UltraNest
  - add ptemcee
  - rotational GP regression kernel as formulated by Foreman-Mackey et al. (2017b)
