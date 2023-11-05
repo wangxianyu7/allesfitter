@@ -158,7 +158,9 @@ def mcmc_fit(datadir):
         #::: make sure the inital positions are within the limits
         for i, b in enumerate(config.BASEMENT.bounds):
             if b[0] == 'uniform':
-                p0[:,i] = np.clip(p0[:,i], b[1], b[2]) 
+                p0[:,i] = np.clip(p0[:,i], b[1], b[2])
+            if b[0] == 'trunc_normal':
+                p0[:,i] = np.clip(p0[:,i], b[1], b[2])
         
         #::: if pre-runs are wished for, and if we are not continuing an existing run
         if continue_old_run==False:
@@ -180,7 +182,12 @@ def mcmc_fit(datadir):
                 #backend.reset(config.BASEMENT.settings['mcmc_nwalkers'], config.BASEMENT.ndim)
                 os.remove(os.path.join(config.BASEMENT.outdir,'mcmc_save.h5'))
                 sampler.reset()
-        
+        #::: make sure the inital positions are within the limits
+        for i, b in enumerate(config.BASEMENT.bounds):
+            if b[0] == 'uniform':
+                p0[:,i] = np.clip(p0[:,i], b[1], b[2])
+            if b[0] == 'trunc_normal':
+                p0[:,i] = np.clip(p0[:,i], b[1], b[2])
         #::: run the sampler        
         logprint("\nRunning full MCMC")
         sampler.run_mcmc(p0,
