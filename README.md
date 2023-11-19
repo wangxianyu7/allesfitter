@@ -72,7 +72,7 @@ The software is freely available at https://github.com/MNGuenther/allesfitter un
 
 
 ### Some TODOs (from Xian-Yu)
- - Add KSint to fit $\lmabda$ using star spots: https://eduscisoft.com/KSINT/manual_KSint.php#example
+ - Add KSint to fit $\lambda$ using star spots: https://eduscisoft.com/KSINT/manual_KSint.php#example
  - How to install on (M1/2, intel) Mac, Linux and Windows
  - add a option to mcmc_fit and ns_fit to skip continue_old_run prompt
  - np.float to np.float64 :white_check_mark:
