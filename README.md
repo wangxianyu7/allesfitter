@@ -72,6 +72,8 @@ The software is freely available at https://github.com/MNGuenther/allesfitter un
 
 
 ### Some TODOs (from Xian-Yu)
+ - change host_lambda and host_vsini to sqrt(vsini)Coslambda and sqrt(vsini)Sinlambda
+ - Add Hirano+2010/2011 ARome models
  - Add KSint to fit $\lambda$ using star spots: https://eduscisoft.com/KSINT/manual_KSint.php#example
  - How to install on (M1/2, intel) Mac, Linux and Windows
  - add a option to mcmc_fit and ns_fit to skip continue_old_run prompt
